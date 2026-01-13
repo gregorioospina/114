@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-title: var(--font-serif-text);
+  --font-body: var(--font-inter);
+  --color-background: #d22023;
+	--color-foreground: #ffffff;
+}
+
+:root {
+  --background: #d22023;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Safari-specific fixes for centering */
+#__next {
+  min-height: 100vh;
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+:where(.react-tweet-theme) * {
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Markdown article styling */
+.prose p {
+  margin-bottom: 1.5em;
+  line-height: 1.8;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
