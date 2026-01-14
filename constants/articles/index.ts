@@ -7,13 +7,14 @@ export const ARTICLES: { id: string; title: string; description: string }[] = [
 	},
 	{
 		id: "igualar-la-cancha",
-		title: "Propuesta nacional: 'IGUALAR LA CANCHA'",
-		description: "No se trata de dar limosnas. Se trata de corregir las reglas del juego para que todos tengamos las mismas oportunidades desde el principio.",
+		title: "Legislar para 'Igualar la Cancha'",
+		description:
+			"Sustituiremos el Régimen Simple por un sistema de contabilidad de caja. Los impuestos se liquidarán sobre la utilidad neta, con un solo impuesto con tarifas que acompañen el crecimiento, no sobre el esfuerzo de venta; si no hay utilidad, no hay carga tributaria. Además, permitiremos la deducción total de costos salariales para incentivar el empleo formal.",
 	},
 	{
 		id: "laboral-para-colombia",
-		title: "Laboral para la Colombia real",
+		title: "Legislar para la 'Colombia Real'",
 		description:
-			"Nuestra propuesta es clara: crear 1.2 millones de empleos formales en cuatro años y convertir a Colombia en una potencia exportadora de la economía digital global.",
+			"Legalizaremos la contratación por horas con protección social proporcional, adaptándonos a la estacionalidad del campo y la flexibilidad de los servicios. Crearemos un Fondo Nacional de Indemnizaciones para garantizar pagos automáticos y eliminar la litigiosidad costosa de pleitos laborales.",
 	},
 ];

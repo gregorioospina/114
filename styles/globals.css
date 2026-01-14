@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-title: var(--font-serif-text);
-  --font-body: var(--font-inter);
+  --font-title: var(--font-manrope);
+  --font-body: var(--font-manrope);
   --color-background: #d22023;
 	--color-foreground: #ffffff;
 }

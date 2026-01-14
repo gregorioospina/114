@@ -7,12 +7,12 @@ export const ScrollingTextBar = ({ texts }: ScrollingTextBarProps) => {
 		<div className="w-full h-[40px] overflow-hidden relative bg-foreground text-background flex items-center">
 			<div className="animate-scroll whitespace-nowrap flex w-[125%]">
 				{texts.map((text, index) => (
-					<span key={`${text}-${index}`} className="inline-block px-2 font-bold uppercase">
+					<span key={`${text}-${index}`} className="inline-block px-2 font-[1000] uppercase">
 						{text}
 					</span>
 				))}
 				{texts.map((text, index) => (
-					<span key={`${text}-${index}-duplicate`} className="inline-block px-2 font-bold uppercase">
+					<span key={`${text}-${index}-duplicate`} className="inline-block px-2 font-[1000] uppercase">
 						{text}
 					</span>
 				))}

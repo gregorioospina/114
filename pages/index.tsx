@@ -2,9 +2,15 @@ import { ScrollingTextBar } from "@/components/scrolling-text-bar";
 import { TWEET_IDS } from "@/constants";
 import { ARTICLES } from "@/constants/articles";
 import { GetStaticProps } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
-import { Tweet } from "react-tweet";
+
+const Tweet = dynamic(() => import("react-tweet").then((mod) => mod.Tweet), {
+	ssr: false,
+	loading: () => <div className="h-96 bg-gray-100 rounded-lg animate-pulse" />,
+});
 
 interface HomeProps {
 	articles: {
@@ -30,26 +36,43 @@ const Home = ({}: HomeProps) => {
 			<Head>
 				<title>Pedro Nel Ospina 114</title>
 			</Head>
-			<ScrollingTextBar texts={["La plata bien manejada, si alcanza", "Vota este 23 de marzo por el 114 para la cámara de representantes por Bogotá"]} />
+			<ScrollingTextBar texts={["Igualar la cancha", "Vota este 8 de marzo por el #114 para la Cámara de Representantes por Bogotá"]} />
 			<div className="min-h-screen py-12">
 				<div className="container mx-auto flex flex-col items-center justify-center">
-					<div className="w-full md:max-w-125 relative mb-8">
-						<img src={"/assets/main.png"} key={"slogan"} alt="la plata bien manejada, si alcanza" className="object-contain" />
+					<div className="w-full md:max-w-125 relative">
+						<Image
+							src="/assets/main.png"
+							key="slogan"
+							alt="la plata bien manejada, si alcanza"
+							className="object-contain"
+							width={1000}
+							height={400}
+							priority
+							fetchPriority="high"
+						/>
+					</div>
+					<div className="px-6 md:px-20 my-10">
+						<p className="text-lg md:text-xl text-justify">
+							Actualmente, las leyes en Colombia no responden a la realidad económica del país, frenando el potencial de las MiPymes y del sector rural. Como
+							candidato a la <span className="font-bold">Cámara por Bogotá con el Nuevo Liberalismo {"(#114)"}</span>, pongo a disposición mi experiencia
+							liderando instituciones como la DIAN, el Presupuesto Nacional, Bancafé, Corficolombiana y Colpensiones para transformar este marco legal en un
+							motor de desarrollo.
+						</p>
 					</div>
 					<div className="flex overflow-x-auto max-w-full gap-0 pb-4 snap-x snap-mandatory scrollbar-hide">
 						{TWEET_IDS.map((tweetId) => (
-							<div key={tweetId} className="px-3 w-11/12 md:w-1/2 snap-start">
+							<div key={tweetId} className="px-3 md:first-of-type:pl-20 first-of-type:pl-6 w-11/12 md:w-1/2 snap-start">
 								<Tweet id={tweetId} />
 							</div>
 						))}
 					</div>
 
 					{/* Articles Section */}
-					<div className="w-full max-w-6xl mt-6 px-4">
-						<h2 className="text-3xl font-bold">Propuestas en detalle</h2>
-						<p className="text-xs md:text-base">En esta campaña, tenemos planes e ideas claras sobre cómo mejorar la vida de los colombianos</p>
+					<div className="w-full max-w-6xl mt-6 px-6 md:px-20">
+						<h2 className="text-3xl font-bold font-body">Propuestas en detalle</h2>
+						<p className="text-md md:text-lg">En esta campaña, tenemos planes e ideas claras sobre cómo mejorar la vida de los colombianos</p>
 						<p className="font-bold mb-4">Lee algunas de estas ideas</p>
-						<div className="flex flex-col md:flex-row gap-6">
+						<div className="flex flex-col lg:flex-row gap-6">
 							{ARTICLES.slice(0, 3).map((article) => (
 								<div
 									key={article.id}
@@ -68,6 +91,9 @@ const Home = ({}: HomeProps) => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="md:max-h-70 pb-10 px-2 md:px-0 flex justify-center">
+				<Image src="/assets/banner-wider.png" alt="footer 114" className="object-contain" width={1200} height={280} />
 			</div>
 		</>
 	);
