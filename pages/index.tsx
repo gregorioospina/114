@@ -1,4 +1,5 @@
 import Footer from "@/components/footer";
+import Loader from "@/components/loader";
 import { ScrollingTextBar } from "@/components/scrolling-text-bar";
 import { TWEET_IDS } from "@/constants";
 import { ARTICLES } from "@/constants/articles";
@@ -7,6 +8,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const Tweet = dynamic(() => import("react-tweet").then((mod) => mod.Tweet), {
 	ssr: false,
@@ -32,6 +34,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 };
 
 const Home = ({}: HomeProps) => {
+	const [loading, setLoading] = useState(true);
+
 	return (
 		<>
 			<Head>
@@ -49,6 +53,7 @@ const Home = ({}: HomeProps) => {
 							width={1000}
 							height={400}
 							priority
+							onLoadingComplete={() => setLoading(false)}
 							fetchPriority="high"
 							sizes="(max-width: 768px) 400px, 1000px"
 						/>
@@ -94,6 +99,7 @@ const Home = ({}: HomeProps) => {
 					</div>
 				</div>
 			</div>
+			<Loader open={loading} fullscreen />
 			<Footer />
 		</>
 	);
