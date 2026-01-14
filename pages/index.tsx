@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import { ScrollingTextBar } from "@/components/scrolling-text-bar";
 import { TWEET_IDS } from "@/constants";
 import { ARTICLES } from "@/constants/articles";
@@ -44,15 +45,16 @@ const Home = ({}: HomeProps) => {
 							src="/assets/main.png"
 							key="slogan"
 							alt="la plata bien manejada, si alcanza"
-							className="object-contain"
+							className="object-contain max-h-[80svh]"
 							width={1000}
 							height={400}
 							priority
 							fetchPriority="high"
+							sizes="(max-width: 768px) 400px, 1000px"
 						/>
 					</div>
 					<div className="px-6 md:px-20 my-10">
-						<p className="text-lg md:text-xl text-justify">
+						<p className="text-base md:text-xl text-justify">
 							Actualmente, las leyes en Colombia no responden a la realidad económica del país, frenando el potencial de las MiPymes y del sector rural. Como
 							candidato a la <span className="font-bold">Cámara por Bogotá con el Nuevo Liberalismo {"(#114)"}</span>, pongo a disposición mi experiencia
 							liderando instituciones como la DIAN, el Presupuesto Nacional, Bancafé, Corficolombiana y Colpensiones para transformar este marco legal en un
@@ -92,9 +94,7 @@ const Home = ({}: HomeProps) => {
 					</div>
 				</div>
 			</div>
-			<div className="md:max-h-70 pb-10 px-2 md:px-0 flex justify-center">
-				<Image src="/assets/banner-wider.png" alt="footer 114" className="object-contain" width={1200} height={280} />
-			</div>
+			<Footer />
 		</>
 	);
 };

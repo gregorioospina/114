@@ -29,5 +29,8 @@
 		"eslint-config-next": "15.5.2",
 		"tailwindcss": "^4",
 		"typescript": "^5"
-	}
+	},
+	"browserslist": [
+		"defaults and fully supports es6-module"
+	]
 }

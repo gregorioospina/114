@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import { ARTICLES } from "@/constants/articles";
 import { promises as fs } from "fs";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -78,6 +79,7 @@ const Article = ({ content, title, description }: ArticleProps) => {
 					</article>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 };
