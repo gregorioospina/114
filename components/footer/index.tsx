@@ -9,8 +9,8 @@ const Footer = () => {
 			<div className="text-center pb-10">
 				<p>
 					Contacto:{" "}
-					<a href="mailto:ospina.pedronel@gmail.com" className="hover:underline font-bold">
-						ospina.pedronel@gmail.com
+					<a href="mailto:pedronelospina114@gmail.com" className="hover:underline font-bold">
+						pedronelospina114@gmail.com
 					</a>
 				</p>
 			</div>
