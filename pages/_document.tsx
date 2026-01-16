@@ -31,7 +31,7 @@ export default function Document() {
 				<meta property="og:title" content="Pedro Nel Ospina 114 - Cámara de Representantes por Bogotá" />
 				<meta
 					property="og:description"
-					content="La plata bien manejada, sí alcanza. Vota este 23 de marzo por el 114 para la Cámara de Representantes por Bogotá. Nuevo Liberalismo."
+					content="¡A igualar la cancha! Vota este 8 de marzo por el 114 para la Cámara de Representantes por Bogotá. Nuevo Liberalismo."
 				/>
 				<meta property="og:image" content="/assets/main.png" />
 				<meta property="og:locale" content="es_CO" />
@@ -39,7 +39,7 @@ export default function Document() {
 				{/* Twitter Card */}
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:title" content="Pedro Nel Ospina 114 - Cámara de Representantes por Bogotá" />
-				<meta name="twitter:description" content="La plata bien manejada, sí alcanza. Experiencia para integrar y crecer." />
+				<meta name="twitter:description" content="¡A igualar la cancha!" />
 				<meta name="twitter:image" content="/assets/main.png" />
 
 				{/* Mobile App Capabilities */}
