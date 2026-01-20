@@ -18,3 +18,13 @@ export const ARTICLES: { id: string; title: string; description: string }[] = [
 			"Legalizaremos la contratación por horas con protección social proporcional, adaptándonos a la estacionalidad del campo y la flexibilidad de los servicios. Crearemos un Fondo Nacional de Indemnizaciones para garantizar pagos automáticos y eliminar la litigiosidad costosa de pleitos laborales.",
 	},
 ];
+
+export const EXTERNAL_ARTICLES: { id: string; author: string; title: string; description: string }[] = [
+	{
+		id: "holmes",
+		title: "La menor oportunidad posible",
+		author: "Rudolf Hommes",
+		description:
+			"Todo está diseñado para que los nuevos tengan la menor posibilidad de ganar posible. Los que repiten tienen el interés de divulgar sus programas y los medios están más dispuestos a divulgarlos y a ignorar las propuestas de los nuevos, si las hubiere. El primíparo se encuentra entonces en una posición ...",
+	},
+];

@@ -2,7 +2,7 @@ import Footer from "@/components/footer";
 import Loader from "@/components/loader";
 import { ScrollingTextBar } from "@/components/scrolling-text-bar";
 import { TWEET_IDS } from "@/constants";
-import { ARTICLES } from "@/constants/articles";
+import { ARTICLES, EXTERNAL_ARTICLES } from "@/constants/articles";
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -91,6 +91,30 @@ const Home = ({}: HomeProps) => {
 									<Link
 										href={`/articles/${article.id}`}
 										className="bg-background rounded-md text-foreground px-4 py-2 font-semibold hover:opacity-90 transition-opacity text-center mt-4 block">
+										Lee el artículo
+									</Link>
+								</div>
+							))}
+						</div>
+					</div>
+					{/* Written about 114 Section */}
+					<div className="w-full max-w-[990px] py-10 mt-10 rounded-xl bg-white max-w-6xl px-6 md:mx-10 md:px-10">
+						<h2 className="text-3xl text-background font-bold font-body">Lo que dicen de la campaña</h2>
+						<p className="text-md text-background md:text-lg">Voces expertas respaldan nuestras propuestas</p>
+						<p className="font-bold text-background mb-4">Lee algunas de estas opiniones</p>
+						<div className="flex flex-col lg:flex-row gap-6">
+							{EXTERNAL_ARTICLES.slice(0, 3).map((article) => (
+								<div
+									key={article.id}
+									className="bg-background rounded-md text-foreground border-2 border-foreground p-6 flex flex-col justify-between hover:shadow-lg transition-shadow md:flex-1">
+									<div>
+										<h3 className="text-xl uppercase font-light mb-1">{article.author}</h3>
+										<h3 className="text-xl font-bold mb-1">{article.title}</h3>
+										<p className="mb-4">{article.description}</p>
+									</div>
+									<Link
+										href={`/articles/external/${article.id}`}
+										className="bg-foreground max-w-60 rounded-md text-background px-4 py-2 font-semibold hover:opacity-90 transition-opacity text-center mt-4 block">
 										Lee el artículo
 									</Link>
 								</div>
