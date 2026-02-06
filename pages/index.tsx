@@ -97,28 +97,58 @@ const Home = ({}: HomeProps) => {
 							))}
 						</div>
 					</div>
-					{/* Written about 114 Section */}
-					<div className="w-full max-w-[990px] py-10 mt-10 rounded-xl bg-white max-w-6xl px-6 md:mx-10 md:px-10">
-						<h2 className="text-3xl text-background font-bold font-body">Lo que dicen de la campaña</h2>
-						<p className="text-md text-background md:text-lg">Voces expertas respaldan nuestras propuestas</p>
-						<p className="font-bold text-background mb-4">Lee algunas de estas opiniones</p>
-						<div className="flex flex-col lg:flex-row gap-6">
-							{EXTERNAL_ARTICLES.slice(0, 3).map((article) => (
-								<div
-									key={article.id}
-									className="bg-background rounded-md text-foreground border-2 border-foreground p-6 flex flex-col justify-between hover:shadow-lg transition-shadow md:flex-1">
-									<div>
-										<h3 className="text-xl uppercase font-light mb-1">{article.author}</h3>
-										<h3 className="text-xl font-bold mb-1">{article.title}</h3>
-										<p className="mb-4">{article.description}</p>
-									</div>
-									<Link
-										href={`/articles/external/${article.id}`}
-										className="bg-foreground max-w-60 rounded-md text-background px-4 py-2 font-semibold hover:opacity-90 transition-opacity text-center mt-4 block">
-										Lee el artículo
-									</Link>
+
+					{/* Interview Section */}
+					<div className="w-full max-w-6xl mt-16 px-6 md:px-20">
+						<h2 className="text-3xl font-bold font-body mb-2">En los medios</h2>
+						<p className="text-md md:text-lg mb-6">Conoce más sobre nuestra visión y propuestas</p>
+						<div className="bg-white rounded-lg p-6 md:p-10 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow">
+							<div className="flex flex-col justify-start flex-shrink-0">
+								<div className="flex items-start p-5 pl-0">
+									<Image src={"/assets/channels4_profile.png"} height={100} width={100} alt="el espectador" />
 								</div>
-							))}
+								<div className="flex-1">
+									<h3 className="text-2xl md:text-3xl font-bold text-background mb-3">¿Por qué votar por Pedro Nel Ospina, candidato a la Cámara?</h3>
+									<p className="text-lg text-gray-700 mb-1 font-semibold">El Espectador</p>
+									<p className="text-gray-600 mb-6">
+										Entrevista completa sobre las propuestas y la visión de la candidatura #114 para la Cámara de Representantes por Bogotá.
+									</p>
+									<a
+										href="https://www.elespectador.com/politica/elecciones-colombia-2026/por-que-votar-por-pedro-nel-ospina-candidato-a-la-camara/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-block bg-background text-foreground px-8 py-3 rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
+										Ver entrevista completa →
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Written about 114 Section */}
+					<div className="w-full max-w-6xl mt-16 px-6 md:px-20">
+						<div className="bg-white rounded-lg p-6 md:p-10 shadow-xl">
+							<h2 className="text-3xl text-background font-bold font-body">Lo que dicen de la campaña</h2>
+							<p className="text-md text-background md:text-lg">Voces expertas respaldan nuestras propuestas</p>
+							<p className="font-bold text-background mb-4">Lee algunas de estas opiniones</p>
+							<div className="flex flex-col lg:flex-row gap-6">
+								{EXTERNAL_ARTICLES.slice(0, 3).map((article) => (
+									<div
+										key={article.id}
+										className="bg-background rounded-md text-foreground border-2 border-foreground p-6 flex flex-col justify-between hover:shadow-lg transition-shadow md:flex-1">
+										<div>
+											<h3 className="text-xl uppercase font-light mb-1">{article.author}</h3>
+											<h3 className="text-xl font-bold mb-1">{article.title}</h3>
+											<p className="mb-4">{article.description}</p>
+										</div>
+										<Link
+											href={`/articles/external/${article.id}`}
+											className="bg-foreground max-w-60 rounded-md text-background px-4 py-2 font-semibold hover:opacity-90 transition-opacity text-center mt-4 block">
+											Lee el artículo
+										</Link>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
