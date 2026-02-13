@@ -17,8 +17,8 @@ const Footer = () => {
 			<div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 pb-10 px-4">
 				<p className="text-center">
 					Contacto:{" "}
-					<a href="mailto:pedronelospina114@gmail.com" className="hover:underline font-bold">
-						pedronelospina114@gmail.com
+					<a href="mailto:info@pedronelospina.com" className="hover:underline font-bold">
+						info@pedronelospina.com
 					</a>
 				</p>
 				<div className="flex gap-3">
