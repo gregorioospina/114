@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { SiFacebook, SiInstagram, SiLinkedin, SiTiktok } from "react-icons/si";
+import { SiLinkedin, SiTiktok } from "react-icons/si";
 
 const Footer = () => {
 	const socialLinks = [
-		{ href: "https://www.instagram.com/pnospina/", icon: <SiInstagram className="w-6 h-6" />, label: "Instagram" },
-		{ href: "https://www.facebook.com/pedronel.ospina.37?locale=es_LA", icon: <SiFacebook className="w-6 h-6" />, label: "Facebook" },
+		// { href: "https://www.instagram.com/pnospina/", icon: <SiInstagram className="w-6 h-6" />, label: "Instagram" },
+		// { href: "https://www.facebook.com/pedronel.ospina.37?locale=es_LA", icon: <SiFacebook className="w-6 h-6" />, label: "Facebook" },
 		{ href: "https://www.tiktok.com/@pedronelospina", icon: <SiTiktok className="w-6 h-6" />, label: "TikTok" },
 		{ href: "https://www.linkedin.com/in/pedro-nel-ospina-51786229/", icon: <SiLinkedin className="w-6 h-6" />, label: "LinkedIn" },
 	];
