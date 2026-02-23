@@ -44,9 +44,9 @@ const Home = ({}: HomeProps) => {
 			<ScrollingTextBar texts={["Igualar la cancha", "Vota este 8 de marzo por el #114 para la Cámara de Representantes por Bogotá"]} />
 			<div className="min-h-screen py-12">
 				<div className="container mx-auto flex flex-col items-center justify-center">
-					<div className="w-full md:max-w-125 relative">
+					<div className="w-full md:max-w-185 relative">
 						<Image
-							src="/assets/main.png"
+							src="/assets/main.jpg"
 							key="slogan"
 							alt="la plata bien manejada, si alcanza"
 							className="object-contain max-h-[80svh]"
@@ -58,14 +58,14 @@ const Home = ({}: HomeProps) => {
 							sizes="(max-width: 768px) 400px, 1000px"
 						/>
 					</div>
-					<div className="px-6 md:px-20 my-10">
+					{/* <div className="px-6 md:px-20 my-10">
 						<p className="text-base md:text-xl text-justify">
 							Actualmente, las leyes en Colombia no responden a la realidad económica del país, frenando el potencial de las MiPymes y del sector rural. Como
 							candidato a la <span className="font-bold">Cámara por Bogotá con el Nuevo Liberalismo {"(#114)"}</span>, pongo a disposición mi experiencia
 							liderando instituciones como la DIAN, el Presupuesto Nacional, Bancafé, Corficolombiana y Colpensiones para transformar este marco legal en un
 							motor de desarrollo.
 						</p>
-					</div>
+					</div> */}
 					<div className="flex overflow-x-auto max-w-full gap-0 pb-4 snap-x snap-mandatory scrollbar-hide">
 						{TWEET_IDS.map((tweetId) => (
 							<div key={tweetId} className="px-3 md:first-of-type:pl-20 first-of-type:pl-6 w-11/12 md:w-1/2 snap-start">
@@ -150,6 +150,20 @@ const Home = ({}: HomeProps) => {
 								))}
 							</div>
 						</div>
+					</div>
+					<div className="w-full md:max-w-165 relative p-6 md:p-2 rounded-md">
+						<Image
+							src="/assets/voting.jpg"
+							key="voting guide"
+							alt="cómo votar"
+							className="object-contain rounded-[inherit] max-h-[80svh]"
+							width={1000}
+							height={400}
+							priority
+							onLoadingComplete={() => setLoading(false)}
+							fetchPriority="high"
+							sizes="(max-width: 768px) 400px, 1000px"
+						/>
 					</div>
 				</div>
 			</div>
