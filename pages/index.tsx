@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import Loader from "@/components/loader";
 import { ScrollingTextBar } from "@/components/scrolling-text-bar";
-import { TWEET_IDS } from "@/constants";
+import { IG_IDS, TWEET_IDS } from "@/constants";
 import { ARTICLES, EXTERNAL_ARTICLES } from "@/constants/articles";
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
@@ -11,6 +11,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Tweet = dynamic(() => import("react-tweet").then((mod) => mod.Tweet), {
+	ssr: false,
+	loading: () => <div className="h-96 bg-gray-100 rounded-lg animate-pulse" />,
+});
+
+const InstagramEmbed = dynamic(() => import("react-social-media-embed").then((mod) => mod.InstagramEmbed), {
 	ssr: false,
 	loading: () => <div className="h-96 bg-gray-100 rounded-lg animate-pulse" />,
 });
@@ -125,6 +130,18 @@ const Home = ({}: HomeProps) => {
 						</div>
 					</div>
 
+					{/* Instagram Posts Section */}
+					<div className="w-full pt-20">
+						{/* <h2 className="text-3xl font-bold font-body mb-6">Síguenos en Instagram</h2> */}
+						<div className="p-4 rounded-md flex overflow-x-auto max-w-full gap-0 pb-4 snap-x snap-mandatory scrollbar-hide">
+							{IG_IDS.map((igId) => (
+								<div key={igId} className="px-3 md:first-of-type:pl-20 first-of-type:pl-6 w-11/12 md:w-1/2 snap-start">
+									<InstagramEmbed url={`https://www.instagram.com/p/${igId}/`} />
+								</div>
+							))}
+						</div>
+					</div>
+
 					{/* Written about 114 Section */}
 					<div className="w-full max-w-6xl mt-16 px-6 md:px-20">
 						<div className="bg-white rounded-lg p-6 md:p-10 shadow-xl">
@@ -151,7 +168,7 @@ const Home = ({}: HomeProps) => {
 							</div>
 						</div>
 					</div>
-					<div className="w-full md:max-w-165 relative p-6 md:p-2 rounded-md">
+					<div className="w-full md:max-w-165 relative p-6 md:p-2 mt-10 rounded-md">
 						<Image
 							src="/assets/voting.jpg"
 							key="voting guide"
