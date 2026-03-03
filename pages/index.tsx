@@ -80,7 +80,7 @@ const Home = ({}: HomeProps) => {
 					</div>
 
 					{/* Articles Section */}
-					<div className="w-full max-w-6xl mt-6 px-6 md:px-20">
+					<div className="w-full max-w-6xl mt-6 px-6 md:px-10">
 						<h2 className="text-3xl font-bold font-body">Propuestas en detalle</h2>
 						<p className="text-md md:text-lg">En esta campaña, tenemos planes e ideas claras sobre cómo mejorar la vida de los colombianos</p>
 						<p className="font-bold mb-4">Lee algunas de estas ideas</p>
@@ -104,27 +104,72 @@ const Home = ({}: HomeProps) => {
 					</div>
 
 					{/* Interview Section */}
-					<div className="w-full max-w-6xl mt-16 px-6 md:px-20">
+					<div className="w-full max-w-6xl mt-16 px-6 md:px-10">
 						<h2 className="text-3xl font-bold font-body mb-2">En los medios</h2>
 						<p className="text-md md:text-lg mb-6">Conoce más sobre nuestra visión y propuestas</p>
-						<div className="bg-white rounded-lg p-6 md:p-10 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow">
-							<div className="flex flex-col justify-start flex-shrink-0">
-								<div className="flex items-start p-5 pl-0">
-									<Image src={"/assets/channels4_profile.png"} height={100} width={100} alt="el espectador" />
+						<div className="flex overflow-x-auto max-w-full gap-6 pb-4 snap-x snap-mandatory scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-x-visible">
+							<div className="bg-white rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+								<div className="flex flex-col justify-start flex-shrink-0">
+									<div className="flex items-start p-5 pl-0">
+										<Image src={"/assets/channels4_profile.png"} height={100} width={100} alt="el espectador" />
+									</div>
+									<div className="flex-1">
+										<h3 className="text-xl md:text-2xl font-bold text-background mb-3">¿Por qué votar por Pedro Nel Ospina, candidato a la Cámara?</h3>
+										<p className="text-lg text-gray-700 mb-1 font-semibold">El Espectador</p>
+										<p className="text-gray-600 mb-6">
+											Entrevista completa sobre las propuestas y la visión de la candidatura #114 para la Cámara de Representantes por Bogotá.
+										</p>
+										<a
+											href="https://www.elespectador.com/politica/elecciones-colombia-2026/por-que-votar-por-pedro-nel-ospina-candidato-a-la-camara/"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-block bg-background text-foreground px-8 py-3 rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
+											Entrevista completa →
+										</a>
+									</div>
 								</div>
-								<div className="flex-1">
-									<h3 className="text-2xl md:text-3xl font-bold text-background mb-3">¿Por qué votar por Pedro Nel Ospina, candidato a la Cámara?</h3>
-									<p className="text-lg text-gray-700 mb-1 font-semibold">El Espectador</p>
-									<p className="text-gray-600 mb-6">
-										Entrevista completa sobre las propuestas y la visión de la candidatura #114 para la Cámara de Representantes por Bogotá.
-									</p>
-									<a
-										href="https://www.elespectador.com/politica/elecciones-colombia-2026/por-que-votar-por-pedro-nel-ospina-candidato-a-la-camara/"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="inline-block bg-background text-foreground px-8 py-3 rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
-										Ver entrevista completa →
-									</a>
+							</div>
+							<div className="bg-white rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+								<div className="flex flex-col justify-start flex-shrink-0">
+									<div className="flex items-start p-5 pl-0">
+										<Image src={"/assets/las2orillas.png"} height={100} width={100} alt="el espectador" />
+									</div>
+									<div className="flex-1">
+										<h3 className="text-xl md:text-2xl font-bold text-background mb-3">
+											Gerencia contra carreta: por qué votar por Pedro Nel Ospina a la Cámara
+										</h3>
+										<p className="text-lg text-gray-700 mb-1 font-semibold">Las 2 Orillas</p>
+										<p className="text-gray-600 mb-6">En un Congreso atrapado en corrupción, votar 114 Nuevo Liberalismo es apostar por gerencia real</p>
+										<a
+											href="https://www.las2orillas.co/gerencia-contra-carreta-por-que-votar-por-pedro-nel-ospina-a-la-camara/"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-block bg-background text-foreground px-8 py-3 rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
+											Artículo completo →
+										</a>
+									</div>
+								</div>
+							</div>
+							<div className="bg-white rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+								<div className="flex flex-col justify-start flex-shrink-0">
+									<div className="flex items-start p-5 pl-0">
+										<Image src={"/assets/el-tiempo.png"} height={100} width={100} alt="el espectador" />
+									</div>
+									<div className="flex-1">
+										<h3 className="text-xl md:text-2xl font-bold text-background mb-3">Voto fundamentado y estratégico</h3>
+										<p className="text-lg text-gray-700 mb-1 font-semibold">Las 2 Orillas</p>
+										<p className="text-gray-600 mb-6">
+											El centro político unido tiene la gran responsabilidad de encauzar a Colombia por el buen camino que traíamos antes del desastroso
+											petrismo.
+										</p>
+										<a
+											href="https://www.eltiempo.com/opinion/columnistas/voto-fundamentado-y-estrategico-3536335"
+											target="_blank"
+											rel="noopener noreferrer"
+											className="inline-block bg-background text-foreground px-8 py-3 rounded-md font-bold hover:opacity-90 transition-opacity shadow-md hover:shadow-lg">
+											Columna completa →
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
