@@ -104,11 +104,13 @@ const Home = ({}: HomeProps) => {
 					</div>
 
 					{/* Interview Section */}
-					<div className="w-full max-w-6xl mt-16 px-6 md:px-10">
-						<h2 className="text-3xl font-bold font-body mb-2">En los medios</h2>
-						<p className="text-md md:text-lg mb-6">Conoce más sobre nuestra visión y propuestas</p>
-						<div className="flex overflow-x-auto max-w-full gap-6 pb-4 snap-x snap-mandatory scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-x-visible">
-							<div className="bg-white rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+					<div className="w-full max-w-6xl mt-16 md:px-10">
+						<div className="px-6">
+							<h2 className="text-3xl font-bold font-body mb-2">En los medios</h2>
+							<p className="text-md md:text-lg mb-6">Conoce más sobre nuestra visión y propuestas</p>
+						</div>
+						<div className="flex overflow-x-auto max-w-full gap-6 pb-4  scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-x-visible">
+							<div className="bg-white ml-5 rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
 								<div className="flex flex-col justify-start flex-shrink-0">
 									<div className="flex items-start p-5 pl-0">
 										<Image src={"/assets/channels4_profile.png"} height={100} width={100} alt="el espectador" />
@@ -150,7 +152,7 @@ const Home = ({}: HomeProps) => {
 									</div>
 								</div>
 							</div>
-							<div className="bg-white rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+							<div className="bg-white mr-5 rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
 								<div className="flex flex-col justify-start flex-shrink-0">
 									<div className="flex items-start p-5 pl-0">
 										<Image src={"/assets/el-tiempo.png"} height={100} width={100} alt="el espectador" />
