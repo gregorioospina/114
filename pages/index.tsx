@@ -110,7 +110,7 @@ const Home = ({}: HomeProps) => {
 							<p className="text-md md:text-lg mb-6">Conoce más sobre nuestra visión y propuestas</p>
 						</div>
 						<div className="flex overflow-x-auto max-w-full gap-6 pb-4  scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-x-visible">
-														<div className="bg-white mr-5 md:mr-0 rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+							<div className="bg-white ml-5 md:ml-0 rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
 								<div className="flex flex-col justify-start flex-shrink-0">
 									<div className="flex items-start p-5 pl-0">
 										<Image src={"/assets/el-tiempo.png"} height={100} width={100} alt="el espectador" />
@@ -119,7 +119,8 @@ const Home = ({}: HomeProps) => {
 										<h3 className="text-xl md:text-2xl font-bold text-background mb-3">Salvar la democracia colombiana</h3>
 										<p className="text-lg text-gray-700 mb-1 font-semibold">El Tiempo</p>
 										<p className="text-gray-600 mb-6">
-											Desde el domingo entraremos en un crucial período de la historia, cuyo final definirá la suerte de nuestra democracia y de nuestras libertades.
+											Desde el domingo entraremos en un crucial período de la historia, cuyo final definirá la suerte de nuestra democracia y de nuestras
+											libertades.
 										</p>
 										<a
 											href="https://www.eltiempo.com/opinion/columnistas/salvar-la-democracia-colombiana-3538015"
@@ -131,7 +132,7 @@ const Home = ({}: HomeProps) => {
 									</div>
 								</div>
 							</div>
-							<div className="bg-white ml-5 md:ml-0 rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
+							<div className="bg-white rounded-lg p-6 border-4 border-foreground shadow-xl hover:shadow-2xl transition-shadow min-w-[80vw] snap-start lg:min-w-0">
 								<div className="flex flex-col justify-start flex-shrink-0">
 									<div className="flex items-start p-5 pl-0">
 										<Image src={"/assets/channels4_profile.png"} height={100} width={100} alt="el espectador" />
